@@ -1,0 +1,14 @@
+https://code.visualstudio.com/docs/agents/guides/monitoring-agents
+
+docker run -it --restart unless-stopped -p 18888:18888 -p 4318:18890 -d --env ASPIRE_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS=true --name aspire-dashboard mcr.microsoft.com/dotnet/aspire-dashboard:13
+
+
+
+Press Ctrl + Shift + P
+Preferences: Open User Settings (JSON)
+Developer: Show Telemetry
+
+{
+  "github.copilot.chat.otel.enabled": true,
+  "github.copilot.chat.otel.captureContent": true
+}
