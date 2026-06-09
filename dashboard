@@ -12,3 +12,19 @@ Developer: Show Telemetry
   "github.copilot.chat.otel.enabled": true,
   "github.copilot.chat.otel.captureContent": true
 }
+----------------------------------------------
+# Claude Cli - Ollama
+----------------------------------------------
+ollama launch claude --model gemma4:e2b
+.claude/settings.json
+{
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+    "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4318",
+    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf",
+    "OTEL_SERVICE_NAME": "gemma4-local",
+    "OTEL_METRICS_EXPORTER": "otlp",
+    "OTEL_LOGS_EXPORTER": "otlp",
+    "OTEL_TRACES_EXPORTER": "otlp"
+  }
+}
